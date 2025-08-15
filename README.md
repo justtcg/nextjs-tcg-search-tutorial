@@ -30,7 +30,7 @@ To get this project running on your local machine, follow these steps.
 
 #### Prerequisites
 
-* Node.js v22 or later.
+* Node.js v20 or later.
 * A free JustTCG API key. You can get one from the **[JustTCG Dashboard](https://justtcg.com/dashboard)**.
 
 #### Installation & Configuration
