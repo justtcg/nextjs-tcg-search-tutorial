@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Search for your favorite TCG cards",
 };
 
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="min-h-screen flex items-start justify-center py-20 px-6">
           <div className="w-full max-w-4xl">
             <main className="mx-auto bg-white/60 dark:bg-gray-900/50 backdrop-blur-md border border-gray-100 dark:border-gray-800 rounded-3xl shadow-2xl p-8">
-              {children}
+              <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
             </main>
             <footer className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
               Secure TCG Search — private API key used on the server

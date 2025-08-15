@@ -26,7 +26,7 @@ export default function SearchBar({ games }: { games: Game[] }) {
 
     const params = new URLSearchParams(searchParams);
     params.set("q", formData.get("q") as string);
-    params.set("game", formData.get("game") as string);
+    if (formData.get("game")) params.set("game", formData.get("game") as string);
 
     pushWithParams(params);
   }
